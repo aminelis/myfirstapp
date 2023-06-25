@@ -1,31 +1,48 @@
 import React from "react";
-import product from './product.js';
-import productImage from './images/prod.jpg';
+import product from './Components/product';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card} from 'react-bootstrap';
+import Price from "./Components/price.js";
+import Description from "./Components/description.js";
+import Image from "./Components/image.js";
+import Card from 'react-bootstrap/Card';
+
+
 
 const firstName = product.name;
 function App() {
   return (
     <div>
-       
-    
-
-    <div>
-      <h1>{product.name}</h1>
-      <p>Price: {product.price}</p>
-      <p>Description: {product.description}</p>
-      {firstName && (
-        <div>
-          <img src={productImage} alt="Product" className="prod" />
-          <p>Hello, {firstName}!</p>
-        </div>
+       <Card style={{ width: '18rem' }}>
+       {firstName && (
+        <Card.Img src={product.image} alt="Description de l'image" />
       )}
+      <Card.Body>
+        <Card.Title></Card.Title>
+        
+        <Card.Text>
+        <Price product={product}/ >
+      <Description product={product}/>
+          <p>Hello, {firstName}!</p>
+      
       {!firstName && <p>Hello, there!</p>}
+        </Card.Text>
+      </Card.Body>
+    </Card>
+      
+      {/*
+      <Price product={product}/ >
+      <Description product={product}/>
+      {firstName && <Image product={product}/>}
+          <p>Hello, {firstName}!</p>
+      
+      {!firstName && <p>Hello, there!</p>}
+      */}
+
       
     </div>
-    </div>
+    
+
   );
 }
 export default App;

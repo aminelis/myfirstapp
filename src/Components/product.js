@@ -1,8 +1,8 @@
 const product = {
-    name: " pc",
+    name: "amine",
     price: 55,
     description: "description",
-    image: "images/prod.pnj"
+    image: "/images/prod.jpg"
   };
   
   export default product;
