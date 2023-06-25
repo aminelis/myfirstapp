@@ -30,14 +30,7 @@ function App() {
       </Card.Body>
     </Card>
       
-      {/*
-      <Price product={product}/ >
-      <Description product={product}/>
-      {firstName && <Image product={product}/>}
-          <p>Hello, {firstName}!</p>
-      
-      {!firstName && <p>Hello, there!</p>}
-      */}
+
 
       
     </div>
